@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "128750361113",
+    "project_id": "plant-nursery-e-store",
+    "storage_bucket": "plant-nursery-e-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128750361113:android:7fbe434b90a235485fe888",
+        "android_client_info": {
+          "package_name": "com.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128750361113-jet6095pdn43hl0h34i3nh0ada1mrphp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.user",
+            "certificate_hash": "21ef65aa330d81819a34c3b99a2e3ea5f6cfc798"
+          }
+        },
+        {
+          "client_id": "128750361113-8jh6bitaqb1ipf3bqu6kralgl5r4aub6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3U7D-6JVy-DBLlR3hPGuQ4Bj1K8X4lAs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128750361113-8jh6bitaqb1ipf3bqu6kralgl5r4aub6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

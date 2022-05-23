@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".intro.navigation.slider.SliderActivity">
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:sliderAnimationDuration="600"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorMarginBottom="60dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="@color/second"
+       />
+
+    <Button
+        android:id="@+id/nextSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="130dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/shap_navigation"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/skipSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Skip"
+        android:layout_alignParentEnd="true"
+        android:textSize="25dp"
+        android:fontFamily="@font/medium"
+        android:padding="20sp"/>
+</RelativeLayout>

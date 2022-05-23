@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable-v24/create_account_button.xml" value="0.1705" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1155" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/register.xml" value="0.165" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/shap_login.xml" value="0.1155" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/shap_navigation.xml" value="0.1865" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/textfield_activated.xml" value="0.196" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_admin.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_main.xml" value="0.228125" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_manager.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_register.xml" value="0.18802083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_regsiter.xml" value="0.184375" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_sing_up.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_splash.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_user.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/app_bar_admin.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/app_bar_manager.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/content_admin.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/content_manager.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/content_user.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/fragment_gallery.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/fragment_home.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/fragment_register_activity.xml" value="0.18802083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/fragment_slideshow.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/item_slider.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/nav_header_user.xml" value="0.15677083333333333" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/menu/user.xml" value="0.15677083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

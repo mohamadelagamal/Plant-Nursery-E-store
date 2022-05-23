@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="vmLogin"
+        type="com.user.account.sign.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#061F24"
+        tools:context=".account.sign.LoginActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:elevation="20dp"
+            android:background="@color/transparent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Plant Nursery E-store"
+                    android:textColor="@color/white"
+                    android:textSize="20dp" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:onClick="@{()->vmLogin.backToRegister()}"
+            app:layout_constraintTop_toBottomOf="@id/appLayout"
+            android:elevation="20dp"
+            android:padding="20dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <ImageView
+            android:id="@+id/imageLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vectortwo"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="#A9D2BD"
+            android:text="Welcome back"
+            android:textSize="35dp"
+            android:fontFamily="@font/bold"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/imageLogin"
+            android:layout_marginBottom="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/textOne"
+            android:text="Sign back into your account to find products YOU want!"
+            android:lines="3"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#A9D2BD"
+            android:layout_marginHorizontal="50dp"
+            android:fontFamily="@font/regular" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".6" />
+
+        <LinearLayout
+            android:id="@+id/linearEdtext"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            android:padding="15dp"
+            android:background="@drawable/register"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textEmail">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Email"
+                    android:text="@={vmLogin.email}"
+                    app:error="@{vmLogin.emailError}"
+                    android:background="@color/transparent"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textPassword"
+                android:layout_marginTop="10dp"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:text="@={vmLogin.password}"
+                    app:error="@{vmLogin.passwordError}"
+                    android:background="@color/transparent"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/create_account_button"
+                android:text="Sign in"
+                android:textSize="15dp"
+                android:onClick="@{()->vmLogin.openHome()}"
+                android:textColor="@color/white"
+                android:layout_marginTop="35dp"
+                android:layout_marginHorizontal="90dp"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
