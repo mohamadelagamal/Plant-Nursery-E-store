@@ -38,7 +38,7 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.myViewHoder> 
     public int getCount() {
         return 2;
     }
-    public class myViewHoder extends SliderAdapter.ViewHolder{
+    public static class myViewHoder extends SliderAdapter.ViewHolder{
         ImageView imageSlider;
         TextView titleSlider;
         TextView descriptionSlider;

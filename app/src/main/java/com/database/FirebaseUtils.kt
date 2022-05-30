@@ -27,3 +27,14 @@ fun getUser(uid:String,onSuccessListener: OnSuccessListener<DocumentSnapshot>,
     val collectionREF = createCollection(ApplicationUser.COLLECTION_NAME)
     collectionREF.document(uid).get().addOnSuccessListener(onSuccessListener).addOnFailureListener(onFailureListener)
 }
+//.. add categories
+//fun addCategories(
+//    category: Category,
+//    onSuccessListener: OnSuccessListener<Void>,
+//    onFailureListener: OnFailureListener
+//){
+//    val collection = createCollection(Category.COLLECTION_NAME)
+//    val doc = collection.document()
+//    category.id = doc.id
+//    doc.set(category).addOnSuccessListener(onSuccessListener).addOnFailureListener(onFailureListener)
+//}

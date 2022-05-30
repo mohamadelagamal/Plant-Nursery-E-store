@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageCategoryItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/rec"
+        android:elevation="20dp"
+        />
+    <TextView
+        android:id="@+id/textCategoryItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Decoration plants"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:gravity="center_horizontal"
+        android:paddingVertical="5dp"/>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Decoration plants"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:gravity="end"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="5dp"/>
+</LinearLayout>

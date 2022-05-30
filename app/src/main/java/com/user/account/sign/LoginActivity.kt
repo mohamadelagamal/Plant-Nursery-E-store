@@ -1,17 +1,12 @@
 package com.user.account.sign
 
-import android.app.AlertDialog
-import android.app.Dialog
-import android.app.PendingIntent.getActivity
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.admin.AdminActivity
 import com.base.BaseActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.manager.ManagerActivity
+import com.manager.main.ManagerActivity
 import com.user.R
 import com.user.account.register.RegisterActivity
 import com.user.databinding.ActivityLoginBinding
@@ -53,7 +48,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding,LoginViewModel>() ,Navig
     }
 
     override fun openManagerPage() {
-    val intent= Intent(this,ManagerActivity::class.java)
+    val intent= Intent(this, ManagerActivity::class.java)
     startActivity(intent)
     finish()
     }

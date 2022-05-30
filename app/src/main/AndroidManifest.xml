@@ -14,7 +14,25 @@
         android:theme="@style/Theme.NabtaStoreMH"
         android:windowSoftInputMode="adjustPan">
         <activity
-            android:name="com.manager.ManagerActivity"
+            android:name="com.manager.repot_two.chart.RadarCharActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.repot_two.chart.PieChartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.repot_two.chart.BarChartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.repot_one.annual.AnnualActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.repot_two.ReportTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.repot_one.ReportOneActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.manager.main.ManagerActivity"
             android:exported="false"
             android:label="@string/title_activity_manager"
             android:theme="@style/Theme.NabtaStoreMH.NoActionBar" />
@@ -23,9 +41,6 @@
             android:exported="false"
             android:label="@string/title_activity_admin"
             android:theme="@style/Theme.NabtaStoreMH.NoActionBar" />
-        <activity
-            android:name=".main.MainActivity"
-            android:exported="false" />
         <activity
             android:name=".main.UserActivity"
             android:exported="false"
@@ -51,6 +66,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.admin.categories.CategoriesActivity"
+            android:exported="true">
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+    <data>
+<variable
+    name="vmManager"
+    type="com.manager.main.ManagerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/black"
-        android:textSize="40dp"
-        android:text="Manager"
-        android:gravity="center_vertical|center_horizontal"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:text="Hello!"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="30dp"
+            android:fontFamily="@font/regular" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".3" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportOne"
+            android:onClick="@{()->vmManager.openReportOne()}"
+            android:layout_margin="30dp"
+            app:elevation="10dp"
+            app:cardCornerRadius="25sp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/second"
+            app:layout_constraintTop_toBottomOf="@id/guideline">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/icon_report"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Report_one"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportTwo"
+            android:layout_marginHorizontal="30dp"
+            app:elevation="10dp"
+            android:onClick="@{()->vmManager.openReportTwo()}"
+            app:cardCornerRadius="25sp"
+            app:strokeWidth="2dp"
+            android:layout_marginTop="60dp"
+            app:strokeColor="@color/second"
+            app:layout_constraintTop_toBottomOf="@id/reportOne">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/icon_bar_chart"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Report_two"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
