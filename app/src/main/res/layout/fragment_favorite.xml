@@ -3,13 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.ui.account.AccountActivity">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context=".main.ui.account.AccountFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewLove"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:textSize="45dp"/>
+        android:padding="10dp"
+        tools:listitem="@layout/item_love"/>
+    <ProgressBar
+        android:id="@+id/myDataLoaderProgressBar"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        />
 
 </FrameLayout>

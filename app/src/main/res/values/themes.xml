@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
     </style>
 
     <style name="Theme.NabtaStoreMH.NoActionBar">
@@ -22,4 +23,10 @@
     <style name="Theme.NabtaStoreMH.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
 
     <style name="Theme.NabtaStoreMH.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="ActivityAnim" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/slider_out</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/slider_out</item>
+    </style>
 </resources>

@@ -8,10 +8,7 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/icon_home"
             android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_explore"
-            android:icon="@drawable/icon_explore"
-            android:title="Explore" />
+
         <item
             android:id="@+id/nav_love"
             android:icon="@drawable/icon_faviorte"

@@ -1,39 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    card_view:cardCornerRadius="25dp"
+    card_view:cardElevation="10dp"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_margin="20dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_margin="15dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/teacherImageView"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="5dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageCategoryItems"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/rec"
-        android:elevation="20dp"
-        />
-    <TextView
-        android:id="@+id/textCategoryItems"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Decoration plants"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:gravity="center_horizontal"
-        android:paddingVertical="5dp"/>
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Decoration plants"
-        android:fontFamily="@font/regular"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:gravity="end"
-        android:layout_marginHorizontal="20dp"
-        android:paddingVertical="5dp"/>
-</LinearLayout>
+            <TextView
+                android:id="@+id/nameTextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Teacher Name"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="normal"
+                android:gravity="center_horizontal"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:text="Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

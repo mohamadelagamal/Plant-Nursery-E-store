@@ -27,6 +27,7 @@ class SplashActivity : AppCompatActivity() {
         image.startAnimation(animation)
         Handler(Looper.getMainLooper()).postDelayed({
             checkLoginInFirebase()
+
         },2000)
     }
     private fun checkLoginInFirebase() {

@@ -2,19 +2,22 @@
 buildscript {
     repositories {
         // Check that you have the following line (if not, add it):
+        ext.kotlin_version = "1.3.72"
         google()  // Google's Maven repository
+        jcenter()
     }
     dependencies {
         // Add this line
         classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.android.tools.build:gradle:7.2.1'
 
     }
 
 }
 plugins {
-    id 'com.android.application' version '7.1.3' apply false
-    id 'com.android.library' version '7.1.3' apply false
-    id 'org.jetbrains.kotlin.android' version '1.5.30' apply false
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.0' apply false
 }
 
 task clean(type: Delete) {

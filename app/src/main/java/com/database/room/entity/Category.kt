@@ -11,7 +11,7 @@ data class Category(
     @PrimaryKey(autoGenerate = true)
     //..to make data in column in Sqlite
     @ColumnInfo
-    var id: Int?=null,
+    var id: String?=null,
     @ColumnInfo
     var name:String?=null,
     @ColumnInfo
@@ -19,5 +19,10 @@ data class Category(
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
     var image:ByteArray
 
-): Serializable
+): Serializable{
+    companion object{
+        const val CONSTANTS_CATEGORY="category"
+        const val CONSTANTS_PRODUCT="product"
+    }
+}
 

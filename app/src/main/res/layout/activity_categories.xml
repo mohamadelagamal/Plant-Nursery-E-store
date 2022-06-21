@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.admin.categories.CategoriesViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:indeterminateBehavior="cycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/categoryID"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="wrap_content"
+                    app:elevation="10dp"
+                    android:layout_marginHorizontal="90dp"
+                    android:backgroundTint="#A8ECD4"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/idCategories"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        error="@{vm.categoryIDError}"
+                        android:text="@={vm.categoriesID}"
+                        android:padding="20dp"
+                        android:inputType="text"
+                        android:hint="Category ID"
+                        android:background="@color/transparent"
+                        android:gravity="center_horizontal" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/categoryName"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="wrap_content"
+                    app:elevation="10dp"
+                    android:layout_marginHorizontal="90dp"
+                    android:backgroundTint="#A8ECD4"
+                    android:layout_marginVertical="50dp">
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp"
+                        android:inputType="text"
+                        android:hint="Category Name"
+                        android:background="@color/transparent"
+                        android:gravity="center_horizontal" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/categoryDes"
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="15dp"
+                    android:layout_height="wrap_content"
+                    app:elevation="10dp"
+                    android:layout_marginHorizontal="90dp"
+                    android:backgroundTint="#A8ECD4">
+
+                    <EditText
+                        android:id="@+id/descriptionEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="20dp"
+                        android:inputType="text"
+                        android:hint="Description"
+                        android:background="@color/transparent"
+                        android:gravity="center_horizontal" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/button_choose_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="50dp"
+                    app:elevation="10dp"
+                    android:layout_marginVertical="50dp"
+                    app:strokeColor="#817A7A"
+                    app:strokeWidth="5dp">
+
+                    <ImageView
+                        android:id="@+id/chooseImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/image_admin" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/upLoadBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#64C6A4"
+                    app:cornerRadius="10dp"
+                    android:textAllCaps="false"
+                    android:text="Save"
+                    android:layout_marginHorizontal="100dp"
+                    android:paddingVertical="10dp" />
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

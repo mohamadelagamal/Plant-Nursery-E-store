@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.user">
+    package="com.user" >
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.NabtaStoreMH"
-        android:windowSoftInputMode="adjustPan">
+        android:windowSoftInputMode="adjustPan" >
+        <activity
+            android:name="com.admin.products.edit_delete.ProductsShowData"
+            android:exported="false" />
+        <activity
+            android:name="com.admin.categories.edit_delete.edit.EditActivityCategories"
+            android:exported="false" />
+        <activity
+            android:name=".main.ui.home.search.SearchScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.admin.products.ProductsActivity"
+            android:exported="false" />
         <activity
             android:name="com.manager.repot_two.chart.RadarCharActivity"
             android:exported="false" />
@@ -38,9 +49,11 @@
             android:theme="@style/Theme.NabtaStoreMH.NoActionBar" />
         <activity
             android:name="com.admin.AdminActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_admin"
-            android:theme="@style/Theme.NabtaStoreMH.NoActionBar" />
+            android:theme="@style/Theme.NabtaStoreMH.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".main.UserActivity"
             android:exported="false"
@@ -59,18 +72,25 @@
         <activity
             android:name=".intro.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.admin.categories.CategoriesActivity"
-            android:exported="true">
-        </activity>
-
+        <activity
+            android:name="com.admin.categories.CategoriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.ui.home.poduct.ProductActivityDetails"
+            android:exported="true" />
+        <activity
+            android:name=".main.ui.home.poduct.details.ShowProductDetails"
+            android:exported="true" />
+        <activity
+            android:name="com.admin.categories.edit_delete.ShowDataCategories"
+            android:exported="false" />
     </application>
 
 </manifest>

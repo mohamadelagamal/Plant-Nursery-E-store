@@ -69,29 +69,6 @@
 
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingVertical="13dp"
-                    android:id="@+id/exploreLinear"
-                    android:gravity="center_vertical"
-                    >
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginHorizontal="8dp"
-                        android:src="@drawable/icon_explore"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/exploreText"
-                        android:textSize="20sp"
-                        android:textColor="@color/black"
-                        android:text="Explore"
-                        android:gravity="center_vertical"/>
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

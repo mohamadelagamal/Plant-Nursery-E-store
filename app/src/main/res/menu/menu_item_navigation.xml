@@ -8,12 +8,8 @@
         android:icon="@drawable/icon_home"
         android:id="@+id/homeNavigation"/>
     <item
-        android:title="Categories"
-        android:icon="@drawable/icon_explore"
-        android:id="@+id/categoriesNavigation"/>
-    <item
         android:title="Love"
-        android:icon="@drawable/icon_faviorte"
+        android:icon="@drawable/icon_love"
         android:id="@+id/favoriteNavigation"/>
     <item
         android:title="Account"

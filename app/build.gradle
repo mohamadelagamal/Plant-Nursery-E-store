@@ -2,6 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+ //   id 'kotlin-android-extensions'
+    id("kotlin-parcelize")
+
 }
 apply plugin: 'com.google.gms.google-services'
 
@@ -82,4 +85,10 @@ dependencies {
 //    implementation 'com.github.bumptech.glide:glide:4.11.0'
 //    kapt 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    
 }
