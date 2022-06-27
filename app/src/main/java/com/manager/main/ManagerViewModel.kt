@@ -10,4 +10,7 @@ class ManagerViewModel : BaseViewModel<Navigator>() {
     fun openReportTwo(){
         navigator?.openReportTwo()
     }
+    fun logOut(){
+        navigator?.openMenu()
+    }
 }

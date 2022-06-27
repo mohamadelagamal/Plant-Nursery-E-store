@@ -1,8 +1,10 @@
 package com.admin.products
 
+import android.app.Application
 import android.content.ContentValues
 import android.net.Uri
 import android.util.Log
+import android.widget.Toast
 import androidx.databinding.ObservableField
 import com.admin.model.Teacher
 import com.base.BaseViewModel
@@ -44,10 +46,13 @@ class ProductViewModel: BaseViewModel<Navigator>() {
                                 news = news.get().toString(),
                                 imageUrl = task.result.toString(),
                                 description = descriptionProduct.get().toString(),
+                                quantity = quantityProduct.get().toString(),
+                                key = mDatabaseRef!!.push().key.toString()
                             )
                             //TODO Here take object form RealTimeDatabase to FireStore DataBase
                             addProduct(upload, onSuccessListener = {}, onFailureListener = {})
                             val uploadId = mDatabaseRef!!.push().key
+                            Log.e("key",uploadId.toString())
                             mDatabaseRef!!.child((uploadId)!!).setValue(upload)
                         }
                         // viewDataBinding.progressBar.visibility = View.INVISIBLE

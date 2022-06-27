@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.user" >
+    package="com.user">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -11,7 +11,22 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.NabtaStoreMH"
-        android:windowSoftInputMode="adjustPan" >
+        android:windowSoftInputMode="adjustPan">
+        <activity
+            android:name=".main.ui.home.add_card.moving.DoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.ui.home.add_card.moving.address.AddressPaiementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.ui.home.add_card.moving.ImmediateOrVisa"
+            android:exported="false" />
+        <activity
+            android:name=".main.ui.home.add_card.AddToCard"
+            android:exported="false" />
+        <activity
+            android:name="com.admin.products.edit_delete.edit.EditProductData"
+            android:exported="false" />
         <activity
             android:name="com.admin.products.edit_delete.ProductsShowData"
             android:exported="false" />
@@ -51,9 +66,7 @@
             android:name="com.admin.AdminActivity"
             android:exported="true"
             android:label="@string/title_activity_admin"
-            android:theme="@style/Theme.NabtaStoreMH.NoActionBar" >
-
-        </activity>
+            android:theme="@style/Theme.NabtaStoreMH.NoActionBar" />
         <activity
             android:name=".main.UserActivity"
             android:exported="false"
@@ -72,7 +85,7 @@
         <activity
             android:name=".intro.splash.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

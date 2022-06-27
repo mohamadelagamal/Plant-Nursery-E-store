@@ -15,7 +15,7 @@ import com.user.main.UserActivity
 
 class LoginActivity : BaseActivity<ActivityLoginBinding,LoginViewModel>() ,Navigator{
     override fun onCreate(savedInstanceState: Bundle?) {
-        chose()
+        choose()
         super.onCreate(savedInstanceState)
         viewDataBinding.vmLogin=viewModel
         viewModel.navigator=this
@@ -53,8 +53,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding,LoginViewModel>() ,Navig
     finish()
     }
 
-    fun chose(){
-        MaterialAlertDialogBuilder(this).setMessage("Who are you,Please check?").setCancelable(false)
+    fun choose(){
+        MaterialAlertDialogBuilder(this@LoginActivity).setMessage("Who are you,Please check?").setCancelable(false)
             .setPositiveButton("Admin"){dialog,which->
                 viewModel.adminMessage.value=true
             }

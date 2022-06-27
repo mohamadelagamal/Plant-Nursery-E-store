@@ -27,7 +27,7 @@ class ListAdapterProducts (var mContext:Context, var teacherList:List<Teacher> )
         var imgT = v.findViewById<ImageView>(R.id.teacherImageView)
         var nameT = v.findViewById<TextView>(R.id.nameTextView)
         var descriT = v.findViewById<TextView>(R.id.descriptionTextView)
-        var delete = v.findViewById<CheckBox>(R.id.deleteShowDataCategories)
+        //var delete = v.findViewById<CheckBox>(R.id.deleteShowDataCategories)
 
     }
 
@@ -49,40 +49,23 @@ class ListAdapterProducts (var mContext:Context, var teacherList:List<Teacher> )
             }
         }
         val db = Firebase.firestore
-        holder.delete.setOnCheckedChangeListener { checkBox, isChecked ->
-//            //.. delete form fireStore
-                db.collection(ConstantCollection.COLLECTION_PRODUCT_FIRESTORE).document(newList.id.toString())
-                    .delete()
-                    .addOnSuccessListener { Log.d(ContentValues.TAG, "DocumentSnapshot successfully deleted!")
-                      //  Toast.makeText(mContext,"successfully deleted", Toast.LENGTH_LONG).show()
-                        Toast.makeText(mContext,newList.id.toString(), Toast.LENGTH_LONG).show()
+     //   holder.delete.setOnCheckedChangeListener { checkBox, isChecked ->
+       // ..... delete form fireStore
 
-                    }
-                    .addOnFailureListener { e -> Log.w(ContentValues.TAG, "Error deleting document", e) }
-            //... delete form realTimeDataBase
-//            val ref = FirebaseDatabase.getInstance().reference
-//            val applesQuery: Query =
-//                ref.child(newList.categoryID.toString()).orderByChild(newList.id.toString()).equalTo(newList.name)
-//            applesQuery.addListenerForSingleValueEvent(object : ValueEventListener {
-//                override fun onDataChange(dataSnapshot: DataSnapshot) {
-//                    for (appleSnapshot in dataSnapshot.children) {
-//                        appleSnapshot.ref.removeValue()
-//                    }
-//                }
-//
-//                override fun onCancelled(databaseError: DatabaseError) {
-//                    Log.e(TAG, "onCancelled", databaseError.toException())
-//                }
-//            })
-        }
+       // }
         onItemClickListener.let {
             holder.itemView.setOnClickListener {
                 onItemClickListener?.onItemClick(position,teacherList[position])
             }
         }
+
     }
     var onItemClickListener: OnItemClickListener? = null
     interface OnItemClickListener {
+        fun onItemClick(pos: Int, room: Teacher)
+    }
+    var onDeleteItemFireStore:OnDeleteItemListener?=null
+    interface OnDeleteItemListener{
         fun onItemClick(pos: Int, room: Teacher)
     }
     fun changData(rooms: List<Teacher>) {

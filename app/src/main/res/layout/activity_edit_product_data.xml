@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/progressBarChangeEdit"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminateBehavior="cycle"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/productID"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#A8ECD4"
+                android:layout_marginVertical="20dp">
+
+                <TextView
+                    android:id="@+id/categoriesIDEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="Category ID"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#A8ECD4"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/nameProductEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="Product Name"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/descriptionEditTextProductCardView"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#A8ECD4"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/descriptionEditTextProductEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="Description Product"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/productPrice"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#A8ECD4">
+
+                <EditText
+                    android:id="@+id/priceEditTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="Product Price"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/productQuantity"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:backgroundTint="#A8ECD4"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/quntityEditTextEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="Product Quantity"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/newProduct"
+                android:layout_width="match_parent"
+                app:cardCornerRadius="15dp"
+                android:layout_height="wrap_content"
+                app:elevation="10dp"
+                android:layout_marginHorizontal="150dp"
+                android:backgroundTint="#A8ECD4"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/newproductEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:inputType="text"
+                    android:hint="New"
+                    android:background="@color/transparent"
+                    android:gravity="center_horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_choose_imageEdit"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="150dp"
+                app:elevation="10dp"
+                android:layout_marginVertical="30dp"
+                app:strokeColor="#817A7A"
+                app:strokeWidth="5dp">
+
+                <ImageView
+                    android:id="@+id/chooseImageViewProductEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_admin" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/upLoadBtnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#64C6A4"
+                    app:cornerRadius="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAllCaps="false"
+                    android:text="Save"
+                    android:layout_weight="1"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deleteItemEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FF0404"
+                    app:cornerRadius="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:textAllCaps="false"
+                    android:text="Delete"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
