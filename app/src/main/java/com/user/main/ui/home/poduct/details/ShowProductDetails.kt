@@ -4,13 +4,13 @@ import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.admin.model.Teacher
 import com.admin.uitel.loadImage
 import com.database.addFavorite
+import com.database.addToCard
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.firebase.database.*
 import com.user.R
 import com.user.main.ui.home.ConstantCollection
 class ShowProductDetails : AppCompatActivity() {
@@ -20,6 +20,7 @@ class ShowProductDetails : AppCompatActivity() {
     lateinit var descriptoin:TextView
     lateinit var loveCheckBox: CheckBox
     lateinit var nameNews:TextView
+    lateinit var addDataToCard:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_product_details)
@@ -28,6 +29,10 @@ class ShowProductDetails : AppCompatActivity() {
         nameNews = findViewById(R.id.newsDetailsProduct)
         descriptoin = findViewById(R.id.descriptionDetails)
         loveCheckBox = findViewById(R.id.cbHeartProduct)
+        addDataToCard = findViewById(R.id.addToCart)
+        addDataToCard.setOnClickListener {
+            addToCardButton()
+        }
         imageView = findViewById(R.id.imageDetailsProduct)
         imageView.loadImage(room.imageUrl)
         nameDetails.setText(room.name)
@@ -45,5 +50,16 @@ class ShowProductDetails : AppCompatActivity() {
                 })
             }
         }
+    }
+    fun addToCardButton(){
+        addToCard(room, onSuccessListener = {
+            MaterialAlertDialogBuilder(this).setMessage("SUCCESSFULLY ADDED !!")
+                .setPositiveButton("yes"){ dialog, which->
+                    dialog.dismiss()
+                }.show()
+
+        }, onFailureListener = {
+            Toast.makeText(this,"please,try again !!", Toast.LENGTH_LONG).show()
+        })
     }
 }

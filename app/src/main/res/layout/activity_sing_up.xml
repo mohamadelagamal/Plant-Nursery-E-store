@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".intro.navigation.slider.SliderActivity">
+
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
         android:layout_width="match_parent"
@@ -14,13 +15,12 @@
         app:sliderIndicatorAnimationDuration="600"
         app:sliderIndicatorGravity="center_horizontal|bottom"
         app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorMarginBottom="60dp"
         app:sliderIndicatorOrientation="horizontal"
         app:sliderIndicatorPadding="3dp"
-        app:sliderIndicatorMarginBottom="60dp"
         app:sliderIndicatorRadius="2dp"
         app:sliderIndicatorSelectedColor="#5A5A5A"
-        app:sliderIndicatorUnselectedColor="@color/second"
-       />
+        app:sliderIndicatorUnselectedColor="@color/second" />
 
     <Button
         android:id="@+id/nextSlider"

@@ -94,5 +94,24 @@ fun getProduct(
 ) {
     val collection = getCollection(ConstantCollection.COLLECTION_PRODUCT_FIRESTORE)
     collection.get().addOnSuccessListener(onSuccessListener).addOnFailureListener(onFailureListener)
+}
+fun addToCard(
+    room: Teacher,
+    onSuccessListener: OnSuccessListener<Void>,
+    onFailureListener: OnFailureListener
+) {
+    val collection = getCollection(ConstantCollection.COLLECTION_ADD_TO_CARD)
+    val doc = collection.document()
+    room.id = doc.id
+    doc.set(room).addOnSuccessListener(onSuccessListener)
+        .addOnFailureListener(onFailureListener)
+}
+
+fun getToCard(
+    onSuccessListener: OnSuccessListener<QuerySnapshot>,
+    onFailureListener: OnFailureListener
+) {
+    val collection = getCollection(ConstantCollection.COLLECTION_ADD_TO_CARD)
+    collection.get().addOnSuccessListener(onSuccessListener).addOnFailureListener(onFailureListener)
 
 }

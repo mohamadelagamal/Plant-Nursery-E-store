@@ -28,6 +28,7 @@ class ProductActivityDetails : BaseActivity<ActivityPoductDetailsBinding,Product
     private var mStorage: FirebaseStorage? = null
     private var mDatabaseRef: DatabaseReference? = null
     private lateinit var mTeachers:MutableList<Teacher>
+    lateinit var nameCategories:TextView
     lateinit var mRecyclerView : RecyclerView
     private var mDBListener: ValueEventListener? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,8 @@ class ProductActivityDetails : BaseActivity<ActivityPoductDetailsBinding,Product
         mRecyclerView = findViewById(R.id.myRecyclerView)
         room = intent.getParcelableExtra(ConstantCollection.COLLECTION_ROOMS)!!
         viewModel.room = room
+        nameCategories=findViewById(R.id.nameCategories)
+        nameCategories.setText(room.name)
         var categoryID = room.categoryID
         viewDataBinding.vmProducts = viewModel
         viewModel.navigator = this

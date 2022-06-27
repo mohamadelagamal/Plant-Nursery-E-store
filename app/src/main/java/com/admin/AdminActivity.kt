@@ -3,6 +3,7 @@ package com.admin
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,16 +12,28 @@ import com.admin.categories.CategoriesActivity
 import com.admin.categories.edit_delete.ShowDataCategories
 import com.admin.products.ProductsActivity
 import com.admin.products.edit_delete.ProductsShowData
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.user.R
+import com.user.account.sign.LoginActivity
 
 
 class AdminActivity : AppCompatActivity() {
     lateinit var categoryCardView: CardView
     lateinit var productCardView: CardView
+    lateinit var logOut:ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
         categoryCardView = findViewById(R.id.categories)
+        logOut = findViewById(R.id.imageLogOutAdmin)
+        logOut.setOnClickListener {
+            MaterialAlertDialogBuilder(this).setMessage("Are you sure to Log out ?").setPositiveButton("yes"){ dialog, which->
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+                dialog.dismiss()
+            }.show()
+        }
 //        categoryCardView.setOnClickListener{
 //            startCategories()
 //        }

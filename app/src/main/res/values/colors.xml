@@ -14,4 +14,6 @@
     <color name="transparent">#0000</color>
     <color name="back_register">#061F24</color>
     <color name="background_login">#061F24</color>
+    <color name="sky">#03C8F8</color>
+    <color name="read">#FF0000</color>
 </resources>

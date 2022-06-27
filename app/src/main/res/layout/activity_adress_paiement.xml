@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="vmAddress"
+        type="com.user.main.ui.home.add_card.moving.address.AddressViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.ui.home.add_card.moving.address.AddressPaiementActivity">
+
+            <ImageView
+                android:id="@+id/shapCard"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/shap_address"
+                app:layout_constraintTop_toTopOf="parent"
+                android:adjustViewBounds="true"
+                app:elevation="0dp"
+                />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardName"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/shapCard"
+            android:layout_marginTop="90dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_marginHorizontal="20dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullNameDetailsPaiement"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@={vmAddress.fullNameAddress}"
+                    app:error="@{vmAddress.fullNameAddressError}"
+                    android:hint="full name"
+                    android:background="@color/transparent"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/shapCard"
+            android:layout_marginTop="90dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_marginHorizontal="20dp">
+
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:id="@+id/phoneLinear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/cardName"
+            android:layout_marginTop="30dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/shap_linear_view"
+            app:layout_constraintStart_toStartOf="@id/cardName"
+            app:layout_constraintEnd_toEndOf="@id/cardName"
+
+            >
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/phoneNumberLib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:text="@={vmAddress.phone}"
+                app:error="@{vmAddress.phoneError}"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="phone number"
+                android:padding="5dp"
+                android:maxLength="10"
+                android:backgroundTint="@color/transparent"
+                android:id="@+id/phoneNumberEdit"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressLinear"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@id/cardName"
+            app:layout_constraintEnd_toEndOf="@id/cardName"
+            android:background="@drawable/shap_linear_view"
+            app:layout_constraintTop_toBottomOf="@id/phoneLinear"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:drawableRight="@drawable/gps_icon"
+                android:onClick="@{()->vmAddress.openGPS()}"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addressTextLayout"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@={vmAddress.address}"
+                    app:error="@{vmAddress.addressError}"
+                    android:hint="address"
+                    android:background="@color/transparent"
+                    android:drawablePadding="10dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/sky"
+            android:onClick="@{()->vmAddress.nextPage()}"
+            android:text="next"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/addressLinear"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/addressLinear"
+            app:layout_constraintTop_toBottomOf="@id/addressLinear"
+            app:layout_constraintVertical_bias="0.502" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

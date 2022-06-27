@@ -15,6 +15,9 @@ data class Teacher(
     var news:String?=null,
     var price:String?=null,
     var quantity:String?=null,
+    var phone:String?=null,
+    var address:String?=null,
+    var counter:String?=null,
     @get:Exclude
     @set:Exclude
     var key:String? = null

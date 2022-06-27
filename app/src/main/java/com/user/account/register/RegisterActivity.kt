@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.base.BaseActivity
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.user.R
 import com.user.account.sign.LoginActivity
 import com.user.databinding.ActivityRegsiterBinding
