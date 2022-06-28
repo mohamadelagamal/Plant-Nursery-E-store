@@ -185,7 +185,6 @@ class AccountFragment : Fragment() {
         startActivityForResult(intent, PICK_IMAGE_REQUEST)
     }
     private var filePath: Uri? = null
-
     private fun logOut() {
         auth?.signOut()
         val intent = Intent(requireContext(), LoginActivity::class.java)

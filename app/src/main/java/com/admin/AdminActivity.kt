@@ -34,20 +34,12 @@ class AdminActivity : AppCompatActivity() {
                 dialog.dismiss()
             }.show()
         }
-//        categoryCardView.setOnClickListener{
-//            startCategories()
-//        }
        productCardView = findViewById(R.id.products)
-//        categoryCardView.setOnClickListener {
-//            val intent = Intent(this, ProductsActivity::class.java)
-//            startActivity(intent)
-//        }
         categoryCardView.setOnClickListener {
             val popupMenu = PopupMenu(this, categoryCardView)
             popupMenu.menuInflater.inflate(R.menu.pop_categories, popupMenu.menu)
             popupMenu.setOnMenuItemClickListener(object : PopupMenu.OnMenuItemClickListener{
                 override fun onMenuItemClick(menuItem: MenuItem?): Boolean {
-                  //  Toast.makeText(this@AdminActivity, "You Clicked " + menuItem?.getTitle(), Toast.LENGTH_SHORT).show();
                   if (menuItem?.itemId == R.id.newCategories){
                       startCategories()
                   }
@@ -57,7 +49,6 @@ class AdminActivity : AppCompatActivity() {
                     }
                     return true;
                 }
-
             })
             popupMenu.show();
         }

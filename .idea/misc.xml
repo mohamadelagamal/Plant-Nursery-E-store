@@ -13,10 +13,13 @@
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/after_liked.xml" value="0.127" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/bakgroung_love.xml" value="0.1655" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/before_liked.xml" value="0.1385" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/custom_star_rating.xml" value="0.199" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/delete_shap.xml" value="0.1795" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/fill_favorite.xml" value="0.199" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.128" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1155" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/icon_shoping.xml" value="0.128" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/radio_filter.xml" value="0.199" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/register.xml" value="0.165" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/search_view_bh.xml" value="0.1655" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/selector_wishlist.xml" value="0.179" />
@@ -28,6 +31,7 @@
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/shap_login.xml" value="0.1155" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/shap_navigation.xml" value="0.1865" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/shap_report.xml" value="0.1515" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/style_rating.xml" value="0.199" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/drawable/textfield_activated.xml" value="0.196" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_add_to_card.xml" value="0.2421875" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_admin.xml" value="0.4" />
@@ -39,6 +43,7 @@
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_done.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_edit_categories.xml" value="0.2421875" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_edit_product_data.xml" value="0.2421875" />
+        <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_filter.xml" value="0.264" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_home.xml" value="0.15677083333333333" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_images.xml" value="0.2421875" />
         <entry key="..\:/AndroidStudioProjects/NabtaStoreMH/app/src/main/res/layout/activity_immediate_or_visa.xml" value="0.264" />

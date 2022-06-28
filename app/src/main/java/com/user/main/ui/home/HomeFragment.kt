@@ -15,6 +15,7 @@ import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import com.user.R
 import com.user.main.ui.home.adapter.ListAdapter
+import com.user.main.ui.home.filter.FilterActivity
 import com.user.main.ui.home.poduct.ProductActivityDetails
 import com.user.main.ui.home.search.SearchScreenActivity
 
@@ -27,6 +28,7 @@ class HomeFragment : Fragment()  {
     lateinit var myDataLoaderProgressBar : ProgressBar
     private lateinit var mTeachers:MutableList<Teacher>
     private lateinit var listAdapter: ListAdapter
+    lateinit var filterImage:ImageView
     lateinit var searchView: ImageView
    // private var _binding : FragmentHomeBinding?=null
    // private val binding get() = _binding!!
@@ -50,6 +52,12 @@ class HomeFragment : Fragment()  {
         mTeachers = ArrayList()
         listAdapter = ListAdapter(requireContext(),mTeachers)
         mRecyclerView.adapter = listAdapter
+        //... filter image
+        filterImage = requireActivity().findViewById(R.id.filterView)
+        filterImage.setOnClickListener {
+            val intent = Intent(requireContext(),FilterActivity::class.java)
+            startActivity(intent)
+        }
         /**set Firebase Database*/
         retriveDatabase()
         searchView = requireView().findViewById(R.id.searchView)

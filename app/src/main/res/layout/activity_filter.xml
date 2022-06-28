@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ui.home.filter.FilterActivity">
+
+
+        <TextView
+            android:id="@+id/searchFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            android:text="Search Filter"
+            />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/searchFilter"
+            android:orientation="horizontal"
+            android:id="@+id/priceRange"
+            android:layout_margin="15dp">
+            <RadioButton
+                android:id="@+id/radioPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Range"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/priceRange"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="90dp"
+        android:id="@+id/textPrice"
+        android:layout_marginTop="15dp"
+        android:weightSum="2">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="#BFB8B8"
+            android:layout_marginEnd="5dp"
+            app:strokeWidth=".5dp"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:backgroundTint="@color/transparent"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:elevation="50dp"
+            android:layout_marginStart="5dp"
+            app:strokeColor="#BFB8B8"
+            app:strokeWidth=".5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/transparent"
+                android:inputType="phone" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textPrice"
+        android:orientation="horizontal"
+        android:id="@+id/startRatings"
+        android:layout_margin="15dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Star Ratings"
+            android:textSize="20dp"
+            android:id="@+id/radioButtonTwo"
+            android:selectAllOnFocus="false"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/startRatings"
+        android:layout_marginTop="30dp"
+        android:numStars="5"
+        app:layout_constraintEnd_toEndOf="@id/priceRange"
+        app:layout_constraintStart_toStartOf="@id/priceRange"
+        android:rating=".5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        android:orientation="horizontal"
+        android:id="@+id/startRatingsThree"
+        android:layout_margin="15dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="20dp"
+            android:id="@+id/radioButtonThree"
+            android:selectAllOnFocus="false"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/startRatingsThree"
+        android:layout_marginHorizontal="60dp"
+        android:id="@+id/line1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Decoration plants"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Wooden trees"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Fruit trees"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Vegetable seedlings and seeds"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Fertilizers"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Fangicide"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"/>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        android:layout_marginHorizontal="50dp"
+        android:paddingVertical="20dp"
+        app:cornerRadius="30dp"
+        android:text="Apply Filter"
+        android:textAllCaps="false"
+        android:textSize="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
